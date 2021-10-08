@@ -1,33 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Grid } from "@mui/material";
 import Product from "../../Components/Products/Product.jsx";
 import useStyle from "./style.js";
-import axios from "axios";
 // redux
-import { useSelector, useDispatch } from "react-redux";
-import { setProduct } from "../../Redux/action/action.jsx";
+import { connect } from "react-redux";
 
-function Home() {
+const mapStateToProps = (state) => {
+    return {
+      products: state.shop.products,
+    };
+};
+
+function Home({products}) {
   const classes = useStyle();
-  const dispatch = useDispatch();
-  const products = useSelector((state) => state);
-  const [prod, setProd] = useState([]);
-  const fetchData = async () => {
-    const response = await axios
-      .get("./Data.json")
-      .then((res) => setProd(res.data.product))
-      .catch((err) => {
-        console.log("error ---->>>", err);
-      });
-    console.log('i came from inside',response);
-    //   dispatch(setProduct(response.data.product))
-  };
-
-  useEffect(() => {
-    fetchData();
-  },[ ]);
-
-console.log('i came from state',prod);
   return (
     <div className={classes.root}>
       <img
@@ -36,7 +21,7 @@ console.log('i came from state',prod);
         className={classes.img}
       />
       <Grid container spacing={2} className={classes.container}>
-        {prod.map((e) => {
+        {products.map((e) => {
          return( 
          <Grid item className={classes.item} xs={12} sm={6} md={4} lg={3}>
             <Product product={e} />
@@ -47,4 +32,4 @@ console.log('i came from state',prod);
   );
 }
 
-export default Home;
+export default connect(mapStateToProps)(Home);
