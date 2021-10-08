@@ -11,7 +11,7 @@ function CART_SUMMARY(props) {
   const classes = useStyle();
   return (
     <div className={classes.root}>
-      <Card sx={{ minWidth: 345 }} elevation={3} className={classes.card}>
+      <Card  elevation={3} className={classes.card}>
         <CardContent>
           <Typography
             gutterBottom

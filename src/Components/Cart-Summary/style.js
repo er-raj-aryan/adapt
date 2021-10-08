@@ -13,6 +13,9 @@ const useStyle = makeStyles(() => ({
     display:'flex',
     alignItems:'center',
     justifyContent:'space-between',
+    '& @media (max-width:500px)':{
+        flexDirection:'column !important'
+    },
   }
   
 }));
