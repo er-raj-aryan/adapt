@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
+import Cart from "./Pages/Cart/Cart";
 import Navbar from "./Components/Navbar/Navbar";
-import Items from "./Components/Cart-Item/Items";
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       </Route>
       <Route exact path="/cart">
         <Navbar />
-        <Items />
+        <Cart />
       </Route>
 
       {/* --page not found-- */}

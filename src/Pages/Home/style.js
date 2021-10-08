@@ -2,8 +2,18 @@ import { makeStyles } from "@mui/styles";
 
 const useStyle = makeStyles(() => ({
   root: {
-    marginTop:'100px',
+    backgroundColor:'#efecec',
   },
+  img: {
+    width: "100%",
+    objectFit: "contain",
+    WebkitMaskImage: "linear-gradient(180deg,#000,transparent)",
+  },
+  container: {
+    padding: "20px",
+    justifyContent:'center',
+  },
+  item: {},
 }));
 
-export default useStyle
+export default useStyle;

@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 const useStyle = makeStyles(() => ({
   root: {},
   appBar: {
-    backgroundColor: "#e7e3e3 !important",
+    backgroundColor: "#0000 !important",
   },
   toolbar: {
     display: "flex",
@@ -12,11 +12,13 @@ const useStyle = makeStyles(() => ({
   },
   logo: {
     textDecoration: "none",
-    color: "#323232bd",
+    color: "white ",
     fontWeight:"600 !important",
     fontFamily: "Poppins, sans-serif !important"
   },
-  cart: {},
+  cart: {
+    color: "white !important",
+  },
 }));
 
 export default useStyle;

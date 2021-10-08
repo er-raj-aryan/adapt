@@ -5,7 +5,7 @@ function Cart() {
     const classes = useStyle()
     return (
         <div className={classes.root}>
-            <h1>i am cart</h1>
+            <img src="https://www.devitpl.com/wp-content/uploads/ecommerce-banner.jpg" alt=""  className={classes.img} />
         </div>
     )
 }

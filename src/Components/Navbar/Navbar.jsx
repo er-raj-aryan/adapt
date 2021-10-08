@@ -10,12 +10,11 @@ import Badge from '@mui/material/Badge';
 
 function Navbar() {
   const classes = useStyle();
-
   const handleOnClick = () => {};
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" color="primary" className={classes.appBar}>
+      <AppBar elevation={0} position="absolute" color="primary" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Typography component={Link} to="/" variant="h6" className={classes.logo} >
             Adapat Ready
