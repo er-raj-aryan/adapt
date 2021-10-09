@@ -3,6 +3,9 @@ import { makeStyles } from "@mui/styles";
 const useStyle = makeStyles(() => ({
   root: {
     backgroundColor:'#efecec',
+    display:'flex',
+    alignItems:'center',
+    flexDirection:'column'
   },
   img: {
     width: "100%",
@@ -14,6 +17,9 @@ const useStyle = makeStyles(() => ({
     justifyContent:'center',
   },
   item: {},
+  searchInput:{
+  margin:'10px !important',
+  },
   langauge:{
     maxWidth: '100%',
     display: 'flex',

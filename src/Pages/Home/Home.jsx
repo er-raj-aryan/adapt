@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Grid } from "@mui/material";
+import { Grid, TextField } from "@mui/material";
 import Product from "../../Components/Products/Product.jsx";
 import useStyle from "./style.js";
 
@@ -45,7 +45,7 @@ const mapStateToProps = (state) => {
 
 function Home({ products }) {
   const classes = useStyle();
-
+const [searchTerm , setSearchTerm] = React.useState("")
   const [name, setName] = React.useState("");
 
   const handleChange = (event) => {
@@ -100,8 +100,15 @@ function Home({ products }) {
           </FormControl>
         </Box>
       </Grid>
+      <TextField type='text' placeholder="Search...." className={classes.searchInput} onChange={(event)=>{setSearchTerm(event.target.value)}} />
       <Grid container spacing={2} className={classes.container}>
-        {products.map((e) => {
+        {products.filter((val)=> {
+          if (searchTerm === ""){
+            return val
+          }else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+            return val
+          }
+        }).map((e) => {
           return (
             <Grid item className={classes.item} xs={12} sm={6} md={4} lg={3}>
               <Product product={e} />
