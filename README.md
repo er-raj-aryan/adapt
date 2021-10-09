@@ -1,6 +1,6 @@
 ## Adapt Ready 
 
-<a href="https://adapt-ready.web.app/" target="_blank" style="text-decoration:none;color:white;font-weigt:700" >Demo <span style="font-size:10px">(click me)</span> </a>
+<a href="https://adapt-ready.web.app/" target="_blank" style="text-decoration:none;color:white;font-weigt:700" >Demo  </a>
 
 # Screenshot
 <img src="./screen.png" alt="adapt ready" style="height:100%; width:100%" />
