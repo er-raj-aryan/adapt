@@ -1,7 +1,10 @@
 import { makeStyles } from "@mui/styles";
 
 const useStyle = makeStyles(() => ({
-  root: {},
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
   img: {
     objectFit: "contain !important",
     padding: '20px 0px',
