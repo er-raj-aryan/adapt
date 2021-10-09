@@ -1,4 +1,4 @@
-import React ,{useEffect , useState} from "react";
+import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import useStyle from "./style.js";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import IconButton from "@mui/material/IconButton";
-import Badge from '@mui/material/Badge';
+import Badge from "@mui/material/Badge";
+
+// redux
 import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
@@ -15,7 +17,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-function Navbar({ cart }) {
+function Navbar({ cart, title }) {
   const classes = useStyle();
   const [cartCount, setCartCount] = useState(0);
 
@@ -30,12 +32,28 @@ function Navbar({ cart }) {
 
   return (
     <div className={classes.root}>
-      <AppBar elevation={0} position="absolute" color="primary" className={classes.appBar}>
+      <AppBar
+        elevation={0}
+        position="absolute"
+        color="primary"
+        className={classes.appBar}
+      >
         <Toolbar className={classes.toolbar}>
-          <Typography component={Link} to="/" variant="h6" className={classes.logo} >
-            Adapat Ready
+          <Typography
+            component={Link}
+            to="/"
+            variant="h6"
+            className={classes.logo}
+          >
+            {title}
           </Typography>
-          <IconButton component={Link} to="/cart" aria-label="Cart" className={classes.cart} >
+
+          <IconButton
+            component={Link}
+            to="/cart"
+            aria-label="Cart"
+            className={classes.cart}
+          >
             <Badge badgeContent={cartCount} color="primary">
               <ShoppingCartIcon />
             </Badge>

@@ -14,6 +14,11 @@ const useStyle = makeStyles(() => ({
     justifyContent:'center',
   },
   item: {},
+  langauge:{
+    maxWidth: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+  }
 }));
 
 export default useStyle;

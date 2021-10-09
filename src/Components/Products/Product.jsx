@@ -8,6 +8,9 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+// language
+import { useTranslation } from "react-i18next";
+
 // Redux
 import { connect } from "react-redux";
 import {
@@ -23,6 +26,7 @@ const mapDispatchToProps = (dispatch) => {
 
 function Product({ product, addToCart, loadCurrentItem }) {
   const classes = useStyle();
+  const { t } = useTranslation();
 
   return (
     <div className={classes.root}>
@@ -48,11 +52,12 @@ function Product({ product, addToCart, loadCurrentItem }) {
             color="text.secondary"
             className={classes.description}
           >
-            {product.description}
+            {t("description")}
+
           </Typography>
         </CardContent>
         <CardActions className={classes.cardAction}>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" className={classes.price}>
             ${product.price}
           </Typography>
           <IconButton

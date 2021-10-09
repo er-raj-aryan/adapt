@@ -4,18 +4,21 @@ const useStyle = makeStyles(() => ({
   root: {},
   img: {
     objectFit: "contain !important",
+    padding: '20px 0px',
   },
   title: {
     display: "-webkit-box",
     WebkitBoxOrient: "vertical",
     WebkitLineClamp: "1",
     overflow: "hidden",
+    fontFamily: "Poppins, sans-serif !important",
   },
   description: {
     display: "-webkit-box",
     WebkitBoxOrient: "vertical",
     WebkitLineClamp: "3",
     overflow: "hidden",
+    fontFamily: "Poppins, sans-serif !important",
   },
   cardAction: {
     display: "flex",
@@ -29,6 +32,9 @@ const useStyle = makeStyles(() => ({
     width: "30px",
     outline: "none",
     border: "none",
+  },
+  price:{
+    fontFamily: "Poppins, sans-serif !important",
   },
 }));
 

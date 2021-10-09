@@ -8,6 +8,10 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import DeleteIcon from '@mui/icons-material/Delete';
+
+// language
+import { useTranslation } from "react-i18next";
+
 // redux
 import { connect } from "react-redux";
 import { adjustItemQty, removeFromCart } from "../../Redux/action/action";
@@ -23,6 +27,7 @@ const mapDispatchToProps = (dispatch) => {
 function Items({ item, adjustQty, removeFromCart }) {
   const classes = useStyle();
   const [input, setInput] = useState(item.qty);
+  const { t } = useTranslation();
 
   const onChangeHandler = (e) => {
     setInput(e.target.value);
@@ -53,11 +58,11 @@ function Items({ item, adjustQty, removeFromCart }) {
             color="text.secondary"
             className={classes.description}
           >
-            {item.description}
+            {t("description")}
           </Typography>
         </CardContent>
         <CardActions className={classes.cardAction}>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" className={classes.price}>
             ${item.price}
           </Typography>
           <Grid className={classes.qtySection}>

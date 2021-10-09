@@ -4,17 +4,21 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Cart from "./Pages/Cart/Cart";
 import Navbar from "./Components/Navbar/Navbar";
+import { useTranslation } from "react-i18next";
+
 
 
 function App() {
+  const { t } = useTranslation();
+
   return (
     <Switch className="App">     
       <Route exact path="/">
-        <Navbar />
+        <Navbar title={t("logo")} />
         <Home />
       </Route>
       <Route exact path="/cart">
-        <Navbar />
+        <Navbar title={t("logo")}/>
         <Cart />
       </Route>
 
