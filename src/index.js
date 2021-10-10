@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./Redux/store/store";
-
+import Loading from './Loading/Loading'
 // multi language
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
@@ -33,9 +33,7 @@ i18next
   });
 
 const loadingMarkup = (
-  <div className="py-4 text-center">
-    <h3>Loading..</h3>
-  </div>
+    <Loading />
 );
 
 console.log("i am from index ===>" )

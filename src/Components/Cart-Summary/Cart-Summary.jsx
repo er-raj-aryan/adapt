@@ -4,11 +4,13 @@ import useStyle from "./style";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-// import Badge from "@mui/material/Badge";
+import { useTranslation } from "react-i18next";
 import DialogBox from './Dialogs/Dialogs'
 
 function CART_SUMMARY(props) {
   const classes = useStyle();
+  const { t } = useTranslation();
+
   return (
     <div className={classes.root}>
       <Card  elevation={3} className={classes.card}>
@@ -19,14 +21,14 @@ function CART_SUMMARY(props) {
             component="div"
             className={classes.title}
           >
-            Cart Summary
+            {t("Cart_Summary")}
           </Typography>
           <Typography
             variant="body2"
             color="text.secondary"
             className={classes.description}
           >
-            TOTAL: ({props.total_Items} items)
+            {t("TOTAL")}: ({props.total_Items} {t("items")})
           </Typography>
           <Typography variant="body2" color="text.secondary">
             ${props.total_Price}

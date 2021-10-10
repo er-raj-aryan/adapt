@@ -8,6 +8,8 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
 // language
 import { useTranslation } from "react-i18next";
 
@@ -38,6 +40,14 @@ function Product({ product, addToCart, loadCurrentItem }) {
           alt={product.title}
           className={classes.img}
         />
+        <Box
+      sx={{
+        '& > legend': { mt: 2 },
+      }}
+      className={classes.rating}
+    >
+      <Rating name="read-only" value={product.rating.rate} readOnly />
+    </Box>
         <CardContent>
           <Typography
             gutterBottom

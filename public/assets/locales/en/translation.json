@@ -3,5 +3,13 @@
     "language": "Language",
     "logo": "Adapt Ready",
     "days_since_release": "it's been {{number_of_days}} days since this video was released",
-    "description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket."
+    "description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+    "Cart_Summary":"Cart Summary",
+    "TOTAL":"TOTAL",
+    "items":"items",
+    "Procced_to_checkout":"Procced to checkout",
+    "Your_Order_is_successful":"Your Order is successful",
+    "Cancel":"Cancel",
+    "Done":"Done",
+    "Successful":"Successful"
 }

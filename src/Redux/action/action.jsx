@@ -1,14 +1,5 @@
 import * as action from "../type/type";
-// import axios from '../../apis/API';
-// import axios from 'axios'
 
-
-// export const fetchProducts =  () => 
-//  async function(dispatch){
-//     const response = await axios.get('/Data.json').catch((err) => console.log("error",err));
-//     console.log('middleware response ==>>',response.data)
-//     dispatch({ type:action.SET_PRODUCTS,payload: response.data});
-// };
 
 export const setProduct = (products) => {
   return {
@@ -16,6 +7,7 @@ export const setProduct = (products) => {
     payload: products
   };
 };
+
 export const addToCart = (itemID) => {
   return {
     type: action.ADD_TO_CART,

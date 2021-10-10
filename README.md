@@ -11,6 +11,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Get the repository with the command of :
+
+### `git clone https://github.com/er-raj-aryan/adapt.git`
+
+Get the Dependency :
+
+### `npm install`
+
 In the project directory, you can run:
 
 ### `npm start`

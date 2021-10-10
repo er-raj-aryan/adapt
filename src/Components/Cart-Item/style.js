@@ -36,6 +36,10 @@ const useStyle = makeStyles(() => ({
   price:{
     fontFamily: "Poppins, sans-serif !important",
   },
+  rating:{
+    display:'flex',
+    justifyContent:'center',
+  }
 }));
 
 export default useStyle;

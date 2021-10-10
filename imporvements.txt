@@ -1,0 +1,6 @@
+# Imporovement suggestions:
+- Loading screen (done)
+- Search for Product (done)
+- Page Not Found (done) 
+- SignIn/SignUp (pending)
+- Session Timeout which help to secure the user account (pending)

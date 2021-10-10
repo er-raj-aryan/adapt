@@ -6,6 +6,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
+import { useTranslation } from "react-i18next";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -13,6 +14,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function DialogBox() {
   const [open, setOpen] = React.useState(false);
+  const { t } = useTranslation();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -25,7 +27,7 @@ export default function DialogBox() {
   return (
     <div>
       <Button variant="contained" onClick={handleClickOpen}>
-      Procced to checkout
+      {t("Procced_to_checkout")}
       </Button>
       <Dialog
         open={open}
@@ -34,15 +36,15 @@ export default function DialogBox() {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{"Successful"}</DialogTitle>
+        <DialogTitle>{t("Successful")}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            Your Order is successful
+          {t("Your_Order_is_successful")}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Done</Button>
+          <Button onClick={handleClose}>{t("Cancel")}</Button>
+          <Button onClick={handleClose}>{t("Done")}</Button>
         </DialogActions>
       </Dialog>
     </div>

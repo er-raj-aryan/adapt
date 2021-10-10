@@ -5,7 +5,7 @@ import Home from "./Pages/Home/Home";
 import Cart from "./Pages/Cart/Cart";
 import Navbar from "./Components/Navbar/Navbar";
 import { useTranslation } from "react-i18next";
-
+import PAGE_NOT_FOUND from './page-not-found/Page-Not-Found'
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
 
       {/* --page not found-- */}
       <Route >
-        404 page not found
+       <PAGE_NOT_FOUND />
       </Route>
     </Switch>
   );
