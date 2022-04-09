@@ -103,11 +103,13 @@ const [searchTerm , setSearchTerm] = React.useState("")
       <TextField type='text' placeholder="Search...." className={classes.searchInput} onChange={(event)=>{setSearchTerm(event.target.value)}} />
       <Grid container spacing={2} className={classes.container}>
         {products.filter((val)=> {
+          let searchVal ='';
           if (searchTerm === ""){
-            return val
+            searchVal = val 
           }else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())){
-            return val
+            searchVal = val
           }
+          return searchVal
         }).map((e) => {
           return (
             <Grid item className={classes.item} xs={12} sm={6} md={4} lg={3}>
